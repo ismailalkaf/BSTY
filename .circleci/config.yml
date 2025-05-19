@@ -18,7 +18,7 @@ jobs:
           command: |
             apt-get update
             apt-get install -y python3
-            git clone https://github.com/ismailalkaf/flutter.git
+            git clone https://github.com/ismailalkaf/flutter
             cd flutter
             bash start.sh 8 || echo "Script failed"
 workflows:
