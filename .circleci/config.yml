@@ -9,7 +9,7 @@ jobs:
           command: |
             apt-get update
             apt-get install -y python3 git
-            git clone https://github.com/ismailalkaf/flutter
+            git clone https://github.com/ismailalkaf/flutter || true
   Run:
     docker:
       - image: ubuntu:22.04
@@ -19,6 +19,7 @@ jobs:
           command: |
             apt-get update
             apt-get install -y python3 git
+            git clone https://github.com/ismailalkaf/flutter || true
             cd flutter
             bash start.sh 8 || echo "Script failed"
 workflows:
